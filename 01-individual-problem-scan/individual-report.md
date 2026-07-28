@@ -75,7 +75,6 @@ Workflow + Human-in-the-loop (Quy trình có con người xác nhận).
 ### Draft current workflow
 
 ```text
-
 CURRENT STATE — Mất 15–30 phút (Rủi ro thiệt hại cao)
 
 [1 Nhận cuộc gọi/tin nhắn đe dọa]
@@ -83,8 +82,11 @@ CURRENT STATE — Mất 15–30 phút (Rủi ro thiệt hại cao)
 → [3 Gọi cho người thân: Không bắt máy]  <-- điểm nghẽn đứt gãy
 → [4 Bị thao túng tâm lý & Làm theo hướng dẫn xấu]
 → [5 Phát hiện bị lừa thì đã muộn]
-Draft future workflow
-Plaintext
+```
+
+### Draft future workflow
+
+```text
 FUTURE STATE — Xử lý trong 1–2 phút (An toàn)
 
 [1 Nhận cuộc gọi/tin nhắn có dấu hiệu bất thường]
@@ -94,69 +96,51 @@ FUTURE STATE — Xử lý trong 1–2 phút (An toàn)
 → [5 Hệ thống hỗ trợ chặn/xử lý an toàn]
 
 Trường hợp người thân chưa phản hồi: AI giữ nguyên trạng thái cảnh báo và hướng dẫn người dùng tạm thời không thao tác bất kỳ giao dịch nào.
-Problem Card #2 — Tổng hợp Báo cáo tuần (Weekly Report)
-Problem 1 câu:
+```
 
+## Problem Card #2 — Tổng hợp Báo cáo tuần (Weekly Report)
+
+**Problem 1 câu:**
 Quản lý dự án và Trưởng nhóm mất nhiều giờ mỗi cuối tuần để thu thập, phân loại và tổng hợp báo cáo rải rác từ các thành viên, dẫn đến trễ tiến độ báo cáo cấp trên và thiếu thời gian phân tích chuyên sâu các rủi ro thực sự của dự án.
 
-Actor:
-
+**Actor:**
 Actor chính: Quản lý dự án (Project Manager), Trưởng nhóm (Team Lead).
-
 Actor phụ: Thành viên trong team (người gửi báo cáo), Cấp quản lý cao hơn / Ban giám đốc (người đọc báo cáo).
 
-Thời điểm / bối cảnh:
-
+**Thời điểm / bối cảnh:**
 Thực hiện định kỳ vào thứ Sáu hàng tuần hoặc đầu tuần mới, khi cần tổng hợp tình hình hoạt động của toàn team để báo cáo cho cấp quản lý/khách hàng.
 
-Current workflow:
+**Current workflow:**
+Quản lý gửi nhắc nhở các thành viên nộp báo cáo tuần cá nhân (qua Slack/Zalo/Email)
+Thành viên viết báo cáo không đồng nhất (người ngắn, người dài, người trễ hạn)
+Quản lý đọc từng báo cáo cá nhân, nhặt lọc thông tin và chép tay vào một file tổng hợp chung
+Quản lý tự tính toán/đánh giá tiến độ, phát hiện các điểm nghẽn và dự báo rủi ro dựa trên cảm tính
+Quản lý viết phần nhận xét/tóm tắt tổng quan dành cho Ban giám đốc
+Gửi báo cáo hoàn chỉnh cho cấp trên (thường bị trễ deadline hoặc thiếu thông tin sâu)
 
-Quản lý gửi nhắc nhở các thành viên nộp báo cáo tuần cá nhân (qua Slack/Zalo/Email).
-
-Thành viên viết báo cáo không đồng nhất (người ngắn, người dài, người trễ hạn).
-
-Quản lý đọc từng báo cáo cá nhân, nhặt lọc thông tin và chép tay vào một file tổng hợp chung.
-
-Quản lý tự tính toán/đánh giá tiến độ, phát hiện các điểm nghẽn và dự báo rủi ro dựa trên cảm tính.
-
-Quản lý viết phần nhận xét/tóm tắt tổng quan dành cho Ban giám đốc.
-
-Gửi báo cáo hoàn chỉnh cho cấp trên (thường bị trễ deadline hoặc thiếu thông tin sâu).
-
-Bottleneck:
-
+**Bottleneck:**
 Bước 3 & 5 — Quản lý tốn quá nhiều thời gian làm công việc cơ học (gom nhặt dữ liệu) và bị quá tải thông tin, dẫn đến việc viết phần nhận xét đánh giá tổng quan (Executive Summary) bị hời hợt hoặc trì hoãn.
 
-Impact:
+**Impact:**
+Mất 2–4 tiếng/tuần của cấp quản lý cao cấp chỉ cho công tác thao tác dữ liệu. Rủi ro bỏ sót các cảnh báo nguy cơ trễ tiến độ (blockers) ẩn giấu trong báo cáo của nhân viên. Báo cáo chậm trễ làm giảm độ linh hoạt trong việc đưa ra quyết định điều chỉnh của Ban giám đốc.
 
-Mất 2–4 tiếng/tuần của cấp quản lý cao cấp chỉ cho công tác thao tác dữ liệu.
-
-Rủi ro bỏ sót các cảnh báo nguy cơ trễ tiến độ (blockers) ẩn giấu trong báo cáo của nhân viên.
-
-Báo cáo chậm trễ làm giảm độ linh hoạt trong việc đưa ra quyết định điều chỉnh của Ban giám đốc.
-
-Success metric:
-
+**Success metric:**
 Giảm thời gian tổng hợp báo cáo tuần từ 3 tiếng xuống < 20 phút.
-
 100% các rủi ro/điểm nghẽn nghiêm trọng (blockers) được tự động trích xuất và gắn cờ cảnh báo (flag).
 
-Non-AI alternative:
-
+**Non-AI alternative:**
 Dùng biểu mẫu cố định (Form/Template): Nhân viên vẫn điền thiếu/đầy đủ tùy nghi, quản lý vẫn phải đọc thủ công từng biểu mẫu.
-
 Quy định thưởng phạt deadline: Giải quyết được việc nộp đúng giờ nhưng không giải quyết được khâu đọc - tổng hợp - trích xuất thông tin.
 
-AI hypothesis:
-
+**AI hypothesis:**
 AI đóng vai trò tự động thu thập và đọc hiểu các báo cáo cá nhân (hoặc cập nhật công việc trên Jira/Trello/Chat), tự động nhóm các công việc theo từng mảng, trích xuất danh sách điểm nghẽn (blockers) và dự thảo sẵn phần Tóm tắt điều hành (Executive Summary) để Quản lý kiểm tra và duyệt.
 
-Quick gut:
-
+**Quick gut:**
 Workflow + Human-in-the-loop (AI tự động trích xuất & phác thảo → Quản lý duyệt & chỉnh sửa nội dung cuối cùng).
 
-Draft current workflow
-Plaintext
+### Draft current workflow
+
+```text
 CURRENT STATE — Mất 3–4 tiếng (Dễ sót thông tin, trễ hạn)
 
 [1 Nhắc nhở thành viên] 
@@ -165,8 +149,12 @@ CURRENT STATE — Mất 3–4 tiếng (Dễ sót thông tin, trễ hạn)
 → [4 Tự tổng hợp & Đánh giá rủi ro] 
 → [5 Viết nhận xét tổng quan] <-- điểm nghẽn tốn não & thời gian
 → [6 Gửi báo cáo muộn]
-Draft future workflow
-Plaintext
+
+```
+
+### Draft future workflow
+
+```text
 FUTURE STATE — Xử lý trong 15–20 phút (Đồng bộ, chính xác)
 
 [1 Thành viên nộp báo cáo hoặc cập nhật công việc trên hệ thống]
@@ -174,67 +162,51 @@ FUTURE STATE — Xử lý trong 15–20 phút (Đồng bộ, chính xác)
 → [3 AI tự động tạo bản phác thảo Weekly Report + Executive Summary]
 → [4 Quản lý review, chỉnh sửa và chốt đánh giá] <-- con người duyệt
 → [5 Tự động xuất file & Gửi Ban giám đốc đúng hạn]
-Problem Card #3 — Khai thác dữ liệu phản hồi người dùng (User Feedback)
-Problem 1 câu:
 
+```
+
+## Problem Card #3 — Khai thác dữ liệu phản hồi người dùng (User Feedback)
+
+**Problem 1 câu:**
 Quản lý sản phẩm (PM) và đội ngũ phát triển bị ngợp trước hàng nghìn phản hồi rải rác từ nhiều kênh (Store reviews, Ticket hỗ trợ, Social, Survey), không thể tổng hợp thủ công để tìm ra đâu là vấn đề thực sự cần ưu tiên xử lý trong đợt nâng cấp tiếp theo.
 
-Actor:
-
+**Actor:**
 Actor chính: Quản lý sản phẩm (Product Manager), Chuyên viên trải nghiệm khách hàng (CX Specialist).
-
 Actor phụ: Đội ngũ CSKH (nhận feedback), Đội ngũ kỹ thuật/Design (nhận yêu cầu cải tiến).
 
-Thời điểm / bối cảnh:
-
+**Thời điểm / bối cảnh:**
 Khi chuẩn bị lập kế hoạch tính năng cho đợt phát triển (Sprint Planning/Roadmap) hoặc sau khi vừa ra mắt một tính năng mới và cần đo lường phản ứng người dùng.
 
-Current workflow:
+**Current workflow:**
+Feedback đổ về rải rác trên App Store, Google Play, Email hỗ trợ, Fanpage, Trực tiếp trong App
+PM hoặc CSKH xuất dữ liệu ra các file Excel/Google Sheet riêng biệt
+Phân công người đọc từng dòng feedback, tự gán nhãn thủ công (ví dụ: "Lỗi thanh toán", "Giao diện xấu", "Tính năng thiếu")
+Đếm số lượng theo cảm tính hoặc tạo bảng pivot cơ bản để báo cáo
+PM họp với team để chọn tính năng sửa dựa trên cảm tính hoặc ý kiến của người nói to nhất
 
-Feedback đổ về rải rác trên App Store, Google Play, Email hỗ trợ, Fanpage, Trực tiếp trong App.
-
-PM hoặc CSKH xuất dữ liệu ra các file Excel/Google Sheet riêng biệt.
-
-Phân công người đọc từng dòng feedback, tự gán nhãn thủ công (ví dụ: "Lỗi thanh toán", "Giao diện xấu", "Tính năng thiếu").
-
-Đếm số lượng theo cảm tính hoặc tạo bảng pivot cơ bản để báo cáo.
-
-PM họp với team để chọn tính năng sửa dựa trên cảm tính hoặc ý kiến của người nói to nhất.
-
-Bottleneck:
-
+**Bottleneck:**
 Bước 3 & 4 — Việc đọc và gán nhãn thủ công hàng ngàn dòng feedback mất nhiều ngày, dẫn đến dữ liệu bị phân tích chậm trễ, nhãn phân loại không đồng nhất giữa các nhân sự và dễ bỏ sót các xu hướng lỗi mới phát sinh.
 
-Impact:
+**Impact:**
+Mất 1–2 tuần mỗi đợt tổng hợp, làm chậm nhịp độ cải tiến sản phẩm. Phát triển sai tính năng ưu tiên do phân tích cảm tính, gây lãng phí nguồn lực lập trình. Người dùng bỏ đi (churn) vì các lỗi ức chế lặp đi lặp lại không được phát hiện và xử lý kịp thời.
 
-Mất 1–2 tuần mỗi đợt tổng hợp, làm chậm nhịp độ cải tiến sản phẩm.
-
-Phát triển sai tính năng ưu tiên do phân tích cảm tính, gây lãng phí nguồn lực lập trình.
-
-Người dùng bỏ đi (churn) vì các lỗi ức chế lặp đi lặp lại không được phát hiện và xử lý kịp thời.
-
-Success metric:
-
+**Success metric:**
 Giảm thời gian tổng hợp và phân loại phản hồi từ 2 tuần xuống < 2 tiếng.
-
 Nhận diện chính xác Top 5 nỗi đau lớn nhất của người dùng dựa trên dữ liệu định tính có bằng chứng thực tế đi kèm.
 
-Non-AI alternative:
-
+**Non-AI alternative:**
 Tìm kiếm theo từ khóa (Keyword search): Rất dễ bỏ sót do người dùng dùng từ đồng nghĩa, viết tắt hoặc gõ sai chính tả (ví dụ: "lag", "giật", "chậm", "xoay xoay").
-
 Mẫu khảo sát đóng (Multiple choice survey): Giới hạn góc nhìn của người dùng, không bắt được các sự cố ngoài kịch bản dự kiến.
 
-AI hypothesis:
-
+**AI hypothesis:**
 AI đóng vai trò gom nhóm ngữ cảnh (Clustering) và phân tích cảm xúc (Sentiment Analysis), tự động đọc hiểu toàn bộ feedback thô từ mọi nguồn, gán nhãn chủ đề chính xác và trích xuất ra các bài toán nổi bật kèm mức độ ảnh hưởng (severity) để PM ra quyết định.
 
-Quick gut:
-
+**Quick gut:**
 Workflow + Analytical Insight (AI phân tích & phân loại dữ liệu lớn → Cung cấp bảng điều khiển Insight cho con người định hướng).
 
-Draft current workflow
-Plaintext
+### Draft current workflow
+
+```text
 CURRENT STATE — Mất 1–2 tuần (Dễ lệch hướng, tốn sức)
 
 [1 Feedback đổ về rải rác nhiều nguồn]
@@ -242,8 +214,12 @@ CURRENT STATE — Mất 1–2 tuần (Dễ lệch hướng, tốn sức)
 → [3 Đọc & Gán nhãn từng dòng feedback] <-- điểm nghẽn quá tải dữ liệu
 → [4 Đếm số lượng & Tổng hợp báo cáo] <-- điểm nghẽn thiếu góc nhìn sâu
 → [5 Ra quyết định làm sản phẩm dựa trên cảm tính]
-Draft future workflow
-Plaintext
+
+```
+
+### Draft future workflow
+
+```text
 FUTURE STATE — Xử lý trong 1–2 tiếng (Dựa trên dữ liệu chuẩn xác)
 
 [1 Kết nối dữ liệu tự động từ các kênh Feedback về hệ thống]
@@ -251,3 +227,5 @@ FUTURE STATE — Xử lý trong 1–2 tiếng (Dựa trên dữ liệu chuẩn x
 → [3 AI xuất Dashboard Top Vấn Đề + Đề xuất mức độ ưu tiên]
 → [4 PM review góc nhìn, đào sâu vào bằng chứng & Chọn Roadmap] <-- con người chốt quyết định
 → [5 Chuyển bài toán sang cho team Kỹ thuật xử lý]
+
+```
